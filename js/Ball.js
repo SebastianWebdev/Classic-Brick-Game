@@ -18,4 +18,17 @@ class BAll {
         ctx.arc(posX, posY, radius, 0, Math.PI * 2, true, )
         ctx.fill()
     }
+    ballColissions(posX = this.posX, posY = this.posY, R = this.radius, canvas = this.canvas) {
+        if (posX > canvas.width - R / 2 || posX < R / 2) {
+            this.speedX *= -1;
+        }
+        if (posY > canvas.height) {
+            this.posY = canvas.height / 2;
+            this.posX = canvas.width / 2;
+            //console.log("drugi if działa");
+        }
+        if (posY < R / 2) {
+            this.speedY *= -1;
+        }
+    }
 }

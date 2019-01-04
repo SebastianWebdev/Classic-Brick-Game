@@ -10,6 +10,13 @@
 <canvas id="game"></canvas>
 
 <body>
+    <script>
+        Array.prototype.remove = function(s) {
+            for (i = 0; i < s.length; i++) {
+                if (s == this[i]) this.splice(i, 1);
+            }
+        }
+    </script>
     <script src="js/Rect.js"></script>
     <script src="js/Brick.js"></script>
     <script src="js/Ball.js"></script>

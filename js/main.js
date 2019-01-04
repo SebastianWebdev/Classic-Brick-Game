@@ -1,1 +1,1 @@
-const render = new Render("game", 30, 1000, 600);
+const render = new Render("game", 60, 1000, 600);
